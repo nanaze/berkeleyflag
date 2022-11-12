@@ -69,7 +69,8 @@ def main():
 
     star_points = []
     for i, point in enumerate(points):
-        if i % 2 == 1:
+        odd = i % 2 != 0
+        if odd:
             point = tuple(coord * midpoint_scale for coord in point)
         star_points.append(point)
 
