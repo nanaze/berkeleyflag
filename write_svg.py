@@ -74,7 +74,6 @@ def main():
             point = tuple(coord * midpoint_scale for coord in point)
         star_points.append(point)
 
-
     print ('<g class="star" transform="scale(0.8) translate(0, 0.05)">')
     print ('<path d="%s"></path>' % _GetPathString(star_points))
 
