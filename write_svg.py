@@ -1,3 +1,8 @@
+"""Writes an SVG of a proposed flag of Berkeley to standard output.
+
+See https://github.com/nanaze/berkeleyflag/
+"""
+
 import math
 import string
 
