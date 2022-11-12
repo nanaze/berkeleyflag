@@ -30,6 +30,9 @@ _FOOTER = """\
 </svg>
 """
 
+_COPPER_GREEN_RGB = (185, 211, 182)
+_DARK_COPPER_GREEN_RGB = tuple(v * 0.8 for v in _COPPER_GREEN_RGB)
+
 def _GetPathString(points):
     path_string = 'M %f, %f ' % points[0]
     for point in points[1:]:
@@ -44,12 +47,9 @@ def main():
     print (_HEADER)
     print ('<style>')
 
-    copper_green = (185, 211, 182)
-    dark_copper_green = tuple(v * 0.8 for v in copper_green)
-
     styles = string.Template(_STYLES).substitute(
-        {'copper_green': _GetRgbString(copper_green),
-         'dark_copper_green': _GetRgbString(dark_copper_green)})
+        {'copper_green': _GetRgbString(_COPPER_GREEN_RGB),
+         'dark_copper_green': _GetRgbString(_DARK_COPPER_GREEN_RGB)})
     print(styles)
     print ('</style>')
 
